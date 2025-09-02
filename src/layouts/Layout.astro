@@ -1,0 +1,86 @@
+---
+import "../assets/app.css";
+import Navbar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<html lang={lang} class="scroll-smooth">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>{t("head.title")}</title>
+        <meta name="description" content={t("head.description")} />
+
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="/logo_balanza_raquel_crespo.png"
+        />
+
+        <!-- Basic OG Tags -->
+        <meta property="og:title" content={t("head.og_title")} />
+        <meta property="og:description" content={t("head.og_description")} />
+        <meta
+            property="og:url"
+            content="https://avogata.cuentamemilongas.com"
+        />
+        <meta
+            property="og:image"
+            content="https://avogata.cuentamemilongas.com/raquel_crespo_avogada.png"
+        />
+
+        <!-- Twitter/X Card Tags -->
+        <meta name="twitter:card" content={t("head.og_description")} />
+        <meta
+            name="twitter:image"
+            content="https://avogata.cuentamemilongas.com/raquel_crespo_avogada.jpeg"
+        />
+
+        <!-- Optional but recommended -->
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={t("head.og_title")} />
+
+        <!-- Links to avoid duplicate content with languages -->
+        <link
+            rel="alternate"
+            hreflang="gl"
+            href="https://avogata.cuentamemilongas.com"
+        />
+        <link
+            rel="alternate"
+            hreflang="es"
+            href="https://avogata.cuentamemilongas.com/es/"
+        />
+
+        <!-- Preload image -->
+        <link
+            rel="preload"
+            as="image"
+            href="/bodegon-con-la-balanza-de-la-justicia.jpg"
+            fetchpriority="high"
+        />
+
+        <link
+            rel="preload"
+            as="font"
+            href="/fonts/bodonimoda.woff2"
+            type="font/woff2"
+            fetchpriority="high"
+        />
+
+        <!-- Preconnect to google maps -->
+        <link rel="preconnect" href="https://maps.googleapis.com" />
+    </head>
+    <body class="mx-auto">
+        <Navbar />
+        <main>
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

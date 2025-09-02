@@ -1,0 +1,92 @@
+---
+import EmailIcon from "../icons/EmailIcon.astro";
+import LocationIcon from "../icons/LocationIcon.astro";
+import PhoneIcon from "../icons/PhoneIcon.astro";
+import ContactForm from "./ContactForm.astro";
+import GoogleMaps from "./GoogleMaps.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section
+    id={t("nav.contact")}
+    class="bg-base-300/30 py-12 min-h-screen flex place-items-center lg:py-20"
+>
+    <div class="container px-6 mx-auto">
+        <div class="text-center">
+            <h3
+                class="mt-2 text-2xl font-semibold text-secondary/95 md:text-3xl"
+            >
+                {t("contact.title")}
+            </h3>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div class="flex flex-col items-center justify-center text-center">
+                <a href="tel:+34 986 223 129" aria-label="Llamar por teléfono">
+                    <PhoneIcon class="w-6 h-6 mx-auto text-secondary/95" />
+
+                    <h4 class="mt-4 text-lg font-medium text-secondary/95">
+                        Teléfono
+                    </h4>
+                    <p class="mt-2 text-secondary/95">
+                        {t("contact.phone.text")}
+                    </p>
+                    <p class="mt-2 text-secondary/95 underline">
+                        +34 986 223 129
+                    </p>
+                </a>
+            </div>
+
+            <div class="divider md:hidden"></div>
+
+            <div class="flex flex-col items-center justify-center text-center">
+                <a
+                    href="https://www.google.es/maps/place/R%C3%BAa+de+Barcelona,+9,+Freixeiro,+36203+Vigo,+Pontevedra/@42.2279387,-8.7265123,1652m/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Abrir en Google Maps en nueva pestaña"
+                >
+                    <LocationIcon class="w-6 h-6 mx-auto text-secondary/95" />
+
+                    <h4 class="mt-4 text-lg font-medium text-secondary/95">
+                        Oficina
+                    </h4>
+                    <p
+                        class="mt-2 text-secondary/95 underline"
+                        set:html={t("contact.office.text")}
+                    />
+                </a>
+            </div>
+
+            <div class="divider md:hidden"></div>
+
+            <div class="flex flex-col items-center justify-center text-center">
+                <a
+                    href="mailto:info@guillermopresaabogados.com"
+                    aria-label="Enviar email desde tu aplicación de correo"
+                >
+                    <EmailIcon class="w-6 h-6 mx-auto text-secondary/95" />
+
+                    <h4 class="mt-4 text-lg font-medium text-secondary/95">
+                        Email
+                    </h4>
+                    <p class="mt-2 text-secondary/95 underline">
+                        info@guillermopresaabogados.com
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-12 md:mt-20 divider"></div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-30 mt-12 lg:mt-30">
+            <ContactForm />
+            <GoogleMaps />
+        </div>
+    </div>
+</section>

@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+    themes: corporate --default;
+}
+
+@plugin "daisyui/theme" {
+    name: "corporate";
+    default: true;
+    prefersdark: false;
+    color-scheme: "light";
+    --color-base-100: #f0f0f2;
+    --color-base-200: #d9d9d9;
+    --color-base-300: #b4b4b4;
+    --color-base-content: oklch(22.389% 0.031 278.072);
+    --color-primary: #7D705F;
+    --color-primary-content: oklch(100% 0 0);
+    --color-secondary: #050360;
+    --color-secondary-content: oklch(100% 0 0);
+    --color-accent: #FCB042;
+    --color-accent-content: oklch(100% 0 0);
+    --color-neutral: oklch(0% 0 0);
+    --color-neutral-content: oklch(100% 0 0);
+    --color-info: oklch(60% 0.126 221.723);
+    --color-info-content: oklch(100% 0 0);
+    --color-success: oklch(62% 0.194 149.214);
+    --color-success-content: oklch(100% 0 0);
+    --color-warning: oklch(85% 0.199 91.936);
+    --color-warning-content: oklch(0% 0 0);
+    --color-error: oklch(70% 0.191 22.216);
+    --color-error-content: oklch(0% 0 0);
+    --radius-selector: 2rem;
+    --radius-field: 0.5rem;
+    --radius-box: 1rem;
+    --size-selector: 0.28125rem;
+    --size-field: 0.21875rem;
+    --border: 1.5px;
+    --depth: 1;
+    --noise: 0;
+}
+
+@font-face {
+    font-family: 'BodoniModa';
+    src: url('/fonts/bodonimoda.woff2') format('woff2');
+    font-display: swap;
+}
+
+body {
+    font-family: 'BodoniModa';
+}
+
+::selection {
+    background: #050360;
+    color: white;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: #050360;
+    color: #EEE;
+    text-shadow: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.importantfield {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}

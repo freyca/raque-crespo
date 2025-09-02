@@ -1,0 +1,73 @@
+---
+import LanguageSelectorIcon from "../icons/LanguageSelectorIcon.astro";
+import HamburgerMenu from "../icons/HamburgerMenu.astro";
+import Menu from "./Menu.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { languages } from "../i18n/ui";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<script is:inline>
+    function selectLanguage(selectedLanguage) {
+        if (selectedLanguage === "es") {
+            location = "/es";
+            return;
+        }
+
+        location = "/";
+    }
+</script>
+
+<div class="navbar bg-base-100 max-w-6xl mx-auto">
+    <div class="navbar-start whitespace-nowrap">
+        <div class="dropdown">
+            <div
+                tabindex="0"
+                role="button"
+                class="btn btn-ghost lg:hidden"
+                aria-roledescription="Menu Button"
+                aria-label="Abrir Menu"
+            >
+                <HamburgerMenu />
+            </div>
+            <nav
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-md z-1 -mx-2 mt-3 px-20 pt-6 pb-12 w-screen shadow gap-6"
+            >
+                <Menu />
+            </nav>
+        </div>
+        <a class="text-xl" href="/">
+            <img
+                src="/logo_sin_letras_raquel_crespo.png"
+                alt="Logo Raquel Crespo"
+                class="h-8 inline mr-2"
+            />
+            <span class="hidden sm:inline">Raquel Crespo</span>
+        </a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+        <nav class="menu menu-horizontal px-1 gap-2">
+            <Menu />
+        </nav>
+    </div>
+    <div class="navbar-end">
+        <LanguageSelectorIcon class="h-6 w-6 mr-2 text-secondary/80" />
+        <select
+            id="language-selector"
+            class="select w-24 focus:outline-none"
+            aria-label="Select Language"
+            onchange="selectLanguage(this.value);"
+        >
+            {
+                Object.entries(languages).map(([code, language]) => (
+                    <option value={code} selected={lang === code}>
+                        {code.toUpperCase()}
+                    </option>
+                ))
+            }
+        </select>
+    </div>
+</div>

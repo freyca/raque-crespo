@@ -1,0 +1,35 @@
+---
+import FooterIcon from "../icons/FooterIcon.astro";
+import TwitterIcon from "../icons/TwitterIcon.astro";
+import YoutubeIcon from "../icons/YoutubeIcon.astro";
+import FacebookIcon from "../icons/FacebookIcon.astro";
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer
+    class="footer sm:footer-horizontal bg-base-100 items-center p-4 max-w-4xl mx-auto"
+>
+    <aside class="grid-flow-col items-center text-secondary-500 mx-auto">
+        <FooterIcon class="w-4 h-4 fill-secondary" />
+        <p>
+            Copyright © {new Date().getFullYear()} - {t("footer.text")}
+        </p>
+    </aside>
+    <nav
+        class="grid-flow-col gap-4 mx-auto md:place-self-center md:justify-self-end"
+    >
+        <a>
+            <TwitterIcon class="w-6 h-6 fill-secondary" />
+        </a>
+        <a>
+            <YoutubeIcon class="w-6 h-6 fill-secondary" />
+        </a>
+        <a>
+            <FacebookIcon class="w-6 h-6 fill-secondary" />
+        </a>
+    </nav>
+</footer>
