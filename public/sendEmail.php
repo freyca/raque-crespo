@@ -14,7 +14,7 @@ function sendEmail(
     try {
         //Recipients
         $mail->setFrom('info@raquelcrespocastro.com', $name);
-        $mail->addAddress('info@raquelcrespocastro.com', 'Raque Crespo');
+        $mail->addAddress('info@raquelcrespocastro.com', 'Raquel Crespo');
         $mail->addReplyTo($email_address, $name);
 
         //Content
