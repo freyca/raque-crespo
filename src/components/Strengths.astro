@@ -11,51 +11,34 @@ const t = useTranslations(lang);
     class="bg-gradient-to-b from-primary/50 to-base-100 py-6 lg:py-24 min-h-screen place-items-center"
 >
     <div
-        class="max-w-6xl grid grid-cols-1 lg:grid-cols-3 mx-auto p-4 gap-10 place-items-center"
+        class="max-w-6xl grid grid-cols-1 lg:grid-cols-2 mx-auto p-4 gap-10 place-items-center"
     >
         <Card
             title={t("strengths.card1.title")}
             body={t("strengths.card1.content")}
-            image="/view-3d-gavel-lawyer-s-day.jpg"
-        >
-            <div class="card-actions justify-end">
-                <div class="badge badge-accent text-primary">
-                    {t("strengths.card1.bubble1")}
-                </div>
-                <div class="badge badge-outline">
-                    {t("strengths.card1.bubble2")}
-                </div>
-            </div>
-        </Card>
+            image="/dereito_penal.jpg"
+            crime_list={t("strengths.card1.list")}
+        />
 
         <Card
             title={t("strengths.card2.title")}
             body={t("strengths.card2.content")}
-            image="/raquel_crespo_posando_sentada.jpeg"
-        >
-            <div class="card-actions justify-end">
-                <div class="badge badge-primary">
-                    {t("strengths.card2.bubble1")}
-                </div>
-                <div class="badge badge-outline">
-                    {t("strengths.card2.bubble2")}
-                </div>
-            </div>
-        </Card>
+            image="/dereito_penitenciario.jpg"
+            crime_list={t("strengths.card2.list")}
+        />
 
         <Card
             title={t("strengths.card3.title")}
             body={t("strengths.card3.content")}
-            image="/two-young-assistants-director-are-discussing-work-progress-restaurant.jpg"
-        >
-            <div class="card-actions justify-end">
-                <div class="badge badge-primary">
-                    {t("strengths.card3.bubble1")}
-                </div>
-                <div class="badge badge-outline">
-                    {t("strengths.card3.bubble2")}
-                </div>
-            </div>
-        </Card>
+            image="/dereito_de_familia.jpg"
+            crime_list={t("strengths.card3.list")}
+        />
+
+        <Card
+            title={t("strengths.card4.title")}
+            body={t("strengths.card4.content")}
+            image="/dereito_administrativo.jpg"
+            crime_list={t("strengths.card4.list")}
+        />
     </div>
 </section>

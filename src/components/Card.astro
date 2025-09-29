@@ -1,5 +1,9 @@
 ---
-const { title, body, image } = Astro.props;
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const { title, body, image, crime_list } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <div class="card bg-base-100 max-w-96 shadow-sm">
@@ -10,10 +14,28 @@ const { title, body, image } = Astro.props;
     <div class="card-body">
         <h2 class="card-title">{title}</h2>
 
-        <p>
+        <p class="mb-2">
             {body}
         </p>
 
-        <slot />
+        <hr />
+
+        <div class="collapse">
+            <input type="checkbox" />
+            <div class="collapse-title pl-0 font-bold">
+                <span class="underline">
+                    {t("card.crime_list")}
+                </span>
+            </div>
+            <div class="collapse-content text-xs">
+                <ul>
+                    {
+                        crime_list.map((crime) => (
+                            <li class="list-disc mb-1">{crime}</li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
     </div>
 </div>

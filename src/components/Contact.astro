@@ -33,9 +33,10 @@ const t = useTranslations(lang);
                     <h4 class="mt-4 text-lg font-medium text-secondary/95">
                         Teléfono
                     </h4>
-                    <p class="mt-2 text-secondary/95">
-                        {t("contact.phone.text")}
-                    </p>
+                    <p
+                        class="mt-2 text-secondary/95"
+                        set:html={t("contact.phone.text")}
+                    />
                     <p class="mt-2 text-secondary/95 underline">
                         +34 986 223 129
                     </p>
@@ -54,7 +55,7 @@ const t = useTranslations(lang);
                     <LocationIcon class="w-6 h-6 mx-auto text-secondary/95" />
 
                     <h4 class="mt-4 text-lg font-medium text-secondary/95">
-                        Oficina
+                        Despacho
                     </h4>
                     <p
                         class="mt-2 text-secondary/95 underline"
