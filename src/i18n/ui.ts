@@ -7,10 +7,10 @@ export const defaultLang = 'gl';
 
 export const ui = {
     gl: {
-        'card.crime_list': 'Ver / Ocultar listaxe de delitos',
+        'card.see_more': 'Ver máis',
         'head.title': 'Raquel Crespo - Avogada en Vigo | Formación e especial interese en Dereito Penal e Penitenciario',
-        'head.description': 'Avogada experta en Dereito Penal e Penitenciario. Asesoramento legal personalizado e defensa xurídica eficaz.',
-        'head.og_title': 'Raquel Crespo - Avogada experta en Dereito Penal e Penitenciario',
+        'head.description': 'Avogada especializada en Dereito Penal e Penitenciario. Asesoramento legal personalizado e defensa xurídica eficaz.',
+        'head.og_title': 'Raquel Crespo - Avogada especializada en Dereito Penal e Penitenciario',
         'head.og_description': 'Asesoramento legal personalizado e defensa xurídica eficaz en temas de Dereito Penal e Penitenciario.',
         'nav.who_am_i': 'Quen son',
         'nav.about': 'Sobre min',
@@ -77,10 +77,10 @@ export const ui = {
         'footer.text': 'Tódolos dereitos reservados'
     },
     es: {
-        'card.crime_list': 'Ver / Ocultar lista de delitos',
+        'card.see_more': 'Ver más',
         'head.title': 'Raquel Crespo - Abogada en Vigo | Formación y especial interés en Derecho Penal y Penitenciario',
-        'head.description': 'Abogada experta en Dereito Penal e Penitenciario. Asesoramento legal personalizado y defensa jurídica eficaz.',
-        'head.og_title': 'Raquel Crespo - Abogada experta en Derecho Penal y Penitenciario',
+        'head.description': 'Abogada especializada en Dereito Penal e Penitenciario. Asesoramento legal personalizado y defensa jurídica eficaz.',
+        'head.og_title': 'Raquel Crespo - Abogada especializada en Derecho Penal y Penitenciario',
         'head.og_description': 'Asesoramiento legal personalizado y defensa jurídica eficaz en temas de Derecho Penal y Penitenciario.',
         'nav.who_am_i': 'Quien soy',
         'nav.about': 'Sobre mi',

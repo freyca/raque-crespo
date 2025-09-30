@@ -4,68 +4,11 @@ import Hero from "../../components/Hero.astro";
 import Contact from "../../components/Contact.astro";
 import Curriculum from "../../components/Curriculum.astro";
 import Strengths from "../../components/Strengths.astro";
-import Card from "../../components/Card.astro";
 ---
 
-<Layout
-    lang="es"
-    title="Raquel Crespo - Abogada en Galicia"
-    description="Abogada experta en Derecho de Familia, Derecho Civil y Derecho de Sucesiones. Asesoramiento legal personalizado y defensa jurídica eficaz."
-    og_title="Raquel Crespo - Abogada experta en Derecho de Familia, Civil y Sucesiones"
-    og_description="Asesoramento legal personalizado y defensa jurídica eficaz en temas de Derecho de Familia, Derecho Civil y Derecho de Sucesiones."
-    nav_bar_who_i_am="Quien Soy"
-    navbar_about_me="Sobre Mi"
-    navbar_strenght="Especialidades"
-    navbar_contact="Contacto"
->
-    <Hero
-        subnameText="Abogada experta en Derecho de Familia, Derecho Civil y Derecho de Suceesiones. <br/> Asesoramento legal personalizado y defensa jurídica eficaz"
-        description="Pongo a tu disposición un servicio xurídico riguroso y personalizado. Ya sea para asesoramento legal, representación en juicio o resolución de conflitos, estoy aquí para proteger tus derechos."
-    />
-    <Curriculum
-        title="Sobre mi"
-        text1="Graduada en Derecho por la Universidad de Santiago de Compostela. Especialización en Derecho Civil y Penal, con formación complementaria en Derecho Laboral y de la Familia."
-        text2="Mas de 10 años de ejercicio como abogada independiente. Experiencia en representación judicial, asesoramiento legal y negociación de conflictos. Participación activa en procedimientos civiles, penales y administrativos."
-        text3="Derecho de familia (divorcios, custodia, alimentos) Derecho penal (delitos leves y graves) Derecho laboral (despidos, acoso laboral) Derecho civil (contratos, reclamaciones, herencias)"
-        text4="Participación en cursos y congresos jurídicos a nivel estatal y autonómico: Violencia de género y protección de las vítimas Protección de datos y derecho digital Mediación y resolución alternativa de conflictos"
-    />
-    <Strengths>
-        <Card
-            title="Derecho da Familia"
-            body="Resuelvo casos de divorcio, custodia, pensiones alimenticias y otros conflictos familiares con un enfoque humano y riguroso."
-            image="/view-3d-gavel-lawyer-s-day.jpg"
-        >
-            <div class="card-actions justify-end">
-                <div class="badge badge-accent text-primary">Especialista</div>
-                <div class="badge badge-outline">Soy la puta mejor</div>
-            </div>
-        </Card>
-
-        <Card
-            title="Derecho Penal"
-            body="Defensa en juicio para delitos leves y graves. Acompañamento legal en todo el proceso penal, con compromiso y confidencialidad."
-            image="/raquel_crespo_posando_sentada.jpeg"
-        >
-            <div class="card-actions justify-end">
-                <div class="badge badge-primary">No me compares</div>
-                <div class="badge badge-outline">Arraso</div>
-            </div>
-        </Card>
-
-        <Card
-            title="Derecho Laboral"
-            body="Asesoramento en casos de despidos, reclamaciones salariales, acoso laboral y derechos laborales en general."
-            image="/two-young-assistants-director-are-discussing-work-progress-restaurant.jpg"
-        >
-            <div class="card-actions justify-end">
-                <div class="badge badge-primary">Fucking ama</div>
-                <div class="badge badge-outline">Yeah baby</div>
-            </div>
-        </Card>
-    </Strengths>
-    <Contact
-        title="Contacta conmigo"
-        phoneText="Lunes a Venres de 8am a 5pm"
-        addressText="Calle de Barcelona, 9, Freixeiro, <br /> 36203 Vigo, Pontevedra"
-    />
+<Layout>
+    <Hero />
+    <!-- <Curriculum /> -->
+    <Strengths />
+    <Contact />
 </Layout>

@@ -12,21 +12,23 @@ const t = useTranslations(lang);
     </figure>
 
     <div class="card-body">
-        <h2 class="card-title">{title}</h2>
-
-        <p class="mb-2">
-            {body}
-        </p>
-
-        <hr />
-
         <div class="collapse">
             <input type="checkbox" />
+
             <div class="collapse-title pl-0 font-bold">
                 <span class="underline">
-                    {t("card.crime_list")}
+                    <h2 class="card-title mb-4">{title}</h2>
                 </span>
+
+                <p>
+                    {body}
+                </p>
+
+                <div class="mt-3 font-light text-sm text-right underline">
+                    {t("card.see_more")}
+                </div>
             </div>
+
             <div class="collapse-content text-xs">
                 <ul>
                     {
