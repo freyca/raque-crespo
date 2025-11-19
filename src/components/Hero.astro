@@ -3,6 +3,7 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const NavbarName = import.meta.env.PUBLIC_NAVBAR_NAME;
 ---
 
 <section
@@ -13,7 +14,7 @@ const t = useTranslations(lang);
     <div class="hero-content flex-col lg:flex-row-reverse">
         <div class="mx-6">
             <h1 class="mb-5 text-5xl font-bold">
-                <div class="text-secondary/95 mb-4">Raquel Crespo</div>
+                <div class="text-secondary/95 mb-4">{NavbarName}</div>
                 <div class="text-xl max-w-96" set:html={t("hero.h1")} />
             </h1>
             <div class="divider divider-primary/95 max-w-80"></div>

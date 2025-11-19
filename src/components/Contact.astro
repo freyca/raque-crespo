@@ -4,6 +4,7 @@ import PhoneIcon from "../icons/PhoneIcon.astro";
 import ContactForm from "./ContactForm.astro";
 import GoogleMaps from "./GoogleMaps.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const PhoneNumber = import.meta.env.PUBLIC_CONTACT_PHONE;
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -30,14 +31,14 @@ const t = useTranslations(lang);
                     <PhoneIcon class="w-6 h-6 mx-auto text-secondary/95" />
 
                     <h4 class="mt-4 text-lg font-medium text-secondary/95">
-                        Teléfono
+                        {t("contact.phone")}
                     </h4>
                     <p
                         class="mt-2 text-secondary/95"
                         set:html={t("contact.phone.text")}
                     />
                     <p class="mt-2 text-secondary/95 underline">
-                        +34 986 223 129
+                        {PhoneNumber}
                     </p>
                 </a>
             </div>
@@ -54,7 +55,7 @@ const t = useTranslations(lang);
                     <LocationIcon class="w-6 h-6 mx-auto text-secondary/95" />
 
                     <h4 class="mt-4 text-lg font-medium text-secondary/95">
-                        Despacho Profesional
+                        {t("contact.office")}
                     </h4>
                     <p
                         class="mt-2 text-secondary/95 underline"

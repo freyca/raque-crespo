@@ -79,7 +79,10 @@ export const ui = {
         'curriculum.title': 'Quen son',
         'curriculum.paragraph1': 'Son graduada en Dereito pola Universidade de Granada e, tras un período de preparación para a carreira xudicial e fiscal, decidín orientar a miña traxectoria profesional cara á avogacía, adicándome ao asesoramento e á defensa xurídica das persoas e dos seus dereitos.',
         'curriculum.paragraph2': 'Exerzo a miña labor nun despacho independente en Vigo, en colaboración con outros profesionais, e presto servizos a clientes en toda Galicia.',
-        'curriculum.paragraph3': 'Concibo o exercicio da avogacía como un servizo ás persoas, baseado na confianza mutua e na procura de solucións xustas e humanas. Por iso, cada caso é tratado con sensibilidade, análise minuciosa e un compromiso absoluto coa defensa dos dereitos fundamentais. A ética, o rigor e a transparencia, xunto coa defensa das garantías do proceso, marcan cada actuación, baixo un criterio xurídico sólido e respectuoso cara a quen represento.'
+        'curriculum.paragraph3': 'Concibo o exercicio da avogacía como un servizo ás persoas, baseado na confianza mutua e na procura de solucións xustas e humanas. Por iso, cada caso é tratado con sensibilidade, análise minuciosa e un compromiso absoluto coa defensa dos dereitos fundamentais. A ética, o rigor e a transparencia, xunto coa defensa das garantías do proceso, marcan cada actuación, baixo un criterio xurídico sólido e respectuoso cara a quen represento.',
+        'contact.phone': 'Teléfono',
+        'contact.send': 'Enviar',
+        'contact.office': 'Despacho Profesional'
     },
     es: {
         'card.see_more': 'Ver más',
