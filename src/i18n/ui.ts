@@ -8,6 +8,7 @@ export const defaultLang = 'gl';
 export const ui = {
     gl: {
         'card.see_more': 'Ver máis',
+        'card.see_less': 'Ver menos',
         'head.title': 'Raquel Crespo - Avogada en Vigo | Formación e especial interese en Dereito Penal e Penitenciario',
         'head.description': 'Avogada especializada en Dereito Penal e Penitenciario. Asesoramento legal personalizado e defensa xurídica eficaz.',
         'head.og_title': 'Raquel Crespo - Avogada especializada en Dereito Penal e Penitenciario',
@@ -93,6 +94,7 @@ export const ui = {
     },
     es: {
         'card.see_more': 'Ver más',
+        'card.see_less': 'Ver menos',
         'head.title': 'Raquel Crespo - Abogada en Vigo | Formación y especial interés en Derecho Penal y Penitenciario',
         'head.description': 'Abogada especializada en Dereito Penal e Penitenciario. Asesoramento legal personalizado y defensa jurídica eficaz.',
         'head.og_title': 'Raquel Crespo - Abogada especializada en Derecho Penal y Penitenciario',

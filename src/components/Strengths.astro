@@ -46,3 +46,31 @@ const t = useTranslations(lang);
         />
     </div>
 </section>
+
+<script is:inline>
+    document.querySelectorAll(".collapse").forEach((collapse) => {
+        collapse.addEventListener("click", () => {
+            const input = collapse.querySelector('input[type="checkbox"]');
+            const seeMore = collapse.querySelector(".see-more");
+
+            // If no checkbox or no see-more button, skip
+            if (!input || !seeMore) return;
+
+            const seeMoreText = seeMore.dataset.seeMore;
+            const seeLessText = seeMore.dataset.seeLess;
+
+            function updateText() {
+                seeMore.textContent = input.checked ? seeLessText : seeMoreText;
+            }
+
+            // Run once on load
+            updateText();
+
+            // DaisyUI collapse toggles when clicking inside
+            collapse.addEventListener("click", () => {
+                // Small timeout so input.checked updates AFTER click
+                setTimeout(updateText, 0);
+            });
+        });
+    });
+</script>

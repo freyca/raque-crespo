@@ -4,6 +4,9 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 const { title, body, image, image_alt, crime_list } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const acordion_id = title.replace(/ /g, "_").toLowerCase();
+const see_more_id = acordion_id + "_see_more";
 ---
 
 <div class="card bg-base-100 max-w-72 lg:max-w-96 shadow-sm">
@@ -12,7 +15,7 @@ const t = useTranslations(lang);
     </figure>
 
     <div class="card-body">
-        <div class="collapse collapse-arrow">
+        <div id={acordion_id} class="collapse collapse-arrow">
             <input type="checkbox" />
 
             <div class="collapse-title pl-0 font-bold">
@@ -24,7 +27,11 @@ const t = useTranslations(lang);
                     {body}
                 </p>
 
-                <div class="mt-3 font-light text-sm text-right underline">
+                <div
+                    class="mt-3 font-light text-sm text-right underline see-more"
+                    data-see-more={t("card.see_more")}
+                    data-see-less={t("card.see_less")}
+                >
                     {t("card.see_more")}
                 </div>
             </div>
