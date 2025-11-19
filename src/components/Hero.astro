@@ -17,9 +17,14 @@ const t = useTranslations(lang);
                 <div class="text-xl max-w-96" set:html={t("hero.h1")} />
             </h1>
             <div class="divider divider-primary/95 max-w-80"></div>
-            <p class="mb-5 max-w-md font-semibold">
-                {t("hero.description")}
-            </p>
+            <div class="mb-5 max-w-md font-semibold">
+                <p class="mb-3">
+                    {t("hero.description1")}
+                </p>
+                <p>
+                    {t("hero.description2")}
+                </p>
+            </div>
         </div>
         <img
             src="/raquel_crespo_posando_de_pie.jpeg"

@@ -17,7 +17,8 @@ export const ui = {
         'nav.strenghts': 'Áreas de práctica',
         'nav.contact': 'Contacto',
         'hero.h1': 'Son avogada con formación e especial interese en Dereito Penal e Penitenciario.',
-        'hero.description': 'O meu labor oriéntase a ofrecer un acompañamento xurídico serio e comprometido, defendendo os dereitos das persoas en situacións complexas e ofrecendo un trato profesional e adaptado ás necesidades de cada cliente. Traballo con rigor, ética e dedicación para garantir un servizo transparente e aportar solucións xurídicas claras e efectivas.',
+        'hero.description1': 'O meu labor oriéntase a ofrecer un acompañamento xurídico serio e comprometido, defendendo os dereitos das persoas en situacións complexas e ofrecendo un trato profesional e adaptado ás necesidades de cada cliente.',
+        'hero.description2': 'Traballo con rigor, ética e dedicación para garantir un servizo transparente e aportar solucións xurídicas claras e efectivas.',
         'about.title': ' Sobre min ',
         'about.paragraph1': 'Graduada en Dereito pola Universidade de Santiago de Compostela. Especialización en Dereito Civil e Penal, con formación complementaria en Dereito Laboral e da Familia.',
         'about.paragraph2': 'Máis de 10 anos de exercicio como avogada independente. Experiencia en representación xudicial, asesoramento legal e negociación de conflitos. Participación activa en procedementos civís, penais e administrativos.',
@@ -74,7 +75,11 @@ export const ui = {
         'contact.form.name': 'Nome',
         'contact.form.email': 'Email',
         'contact.form.message': 'Escribe a túa mensaxe aquí...',
-        'footer.text': 'Tódolos dereitos reservados'
+        'footer.text': 'Tódolos dereitos reservados',
+        'curriculum.title': 'Quen son',
+        'curriculum.paragraph1': 'Son graduada en Dereito pola Universidade de Granada e, tras un período de preparación para a carreira xudicial e fiscal, decidín orientar a miña traxectoria profesional cara á avogacía, adicándome ao asesoramento e á defensa xurídica das persoas e dos seus dereitos.',
+        'curriculum.paragraph2': 'Exerzo a miña labor nun despacho independente en Vigo, en colaboración con outros profesionais, e presto servizos a clientes en toda Galicia.',
+        'curriculum.paragraph3': 'Concibo o exercicio da avogacía como un servizo ás persoas, baseado na confianza mutua e na procura de solucións xustas e humanas. Por iso, cada caso é tratado con sensibilidade, análise minuciosa e un compromiso absoluto coa defensa dos dereitos fundamentais. A ética, o rigor e a transparencia, xunto coa defensa das garantías do proceso, marcan cada actuación, baixo un criterio xurídico sólido e respectuoso cara a quen represento.'
     },
     es: {
         'card.see_more': 'Ver más',
@@ -87,7 +92,8 @@ export const ui = {
         'nav.strenghts': 'Áreas de práctica',
         'nav.contact': 'Contacto',
         'hero.h1': 'Soy abogada con formación y especial interés en Derecho Penal y Penitenciario.',
-        'hero.description': 'Mi labor se orienta a ofrecer un acompañamiento jurídico serio, cercano y comprometido, defendiendo los derechos de las personas en situaciones complejas y ofreciendo un trato profesional y adaptado a las necesidades de cada cliente. Trabajo con rigor, ética y dedicación para garantizar un servicio transparente y aportar soluciones jurídicas claras y efectivas.',
+        'hero.description1': 'Mi labor se orienta a ofrecer un acompañamiento jurídico serio, cercano y comprometido, defendiendo los derechos de las personas en situaciones complejas y ofreciendo un trato profesional y adaptado a las necesidades de cada cliente.',
+        'hero.description2': 'Trabajo con rigor, ética y dedicación para garantizar un servicio transparente y aportar soluciones jurídicas claras y efectivas.',
         'about.title': ' Sobre mi ',
         'about.paragraph1': 'Graduada en Derecho por la Universidad de Santiago de Compostela. Especialización en Derecho Civil y Penal, con formación complementaria en Derecho Laboral y de la Familia.',
         'about.paragraph2': 'Más de 10 años de ejxercicio como abogada independiente. Experiencia en representación judicial, asesoramiento legal y negociación de conflivtos. Participación activa en procedimientos civiles, penales y administrativos.',
@@ -144,7 +150,11 @@ export const ui = {
         'contact.form.name': 'Nombre',
         'contact.form.email': 'Email',
         'contact.form.message': 'Escribe aquí tu mensaje...',
-        'footer.text': 'Todos los derechos reservados'
+        'footer.text': 'Todos los derechos reservados',
+        'curriculum.title': 'Quien soy',
+        'curriculum.paragraph1': 'Soy graduada en Derecho por la Universidad de Granada y, tras un período de preparación para la carrera judicial y fiscal, decidí orientar mi trayectoria profesional hacia la abogacía, dedicándome al asesoramiento y a la defensa jurídica de las personas y de sus derechos.',
+        'curriculum.paragraph2': 'Desempeño mi labor en un despacho independiente en Vigo, colaborando con otros profesionales, y presto servicios a clientes en toda Galicia.',
+        'curriculum.paragraph3': 'Concibo el ejercicio de la abogacía como un servicio a las personas, basado en la confianza mutua y en la búsqueda de soluciones justas y humanas. Por ello, cada caso se trata con sensibilidad, análisis minucioso y un compromiso absoluto con la defensa de los derechos fundamentales. La ética, el rigor y la transparencia, junto con la defensa de las garantías del proceso, marcan cada actuación, bajo un criterio jurídico sólido y respetuoso hacia quienes represento.'
     },
 } as const;
 
