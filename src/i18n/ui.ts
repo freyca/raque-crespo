@@ -149,7 +149,7 @@ export const ui = {
         ],
         'contact.title': 'Contacte conmigo',
         'contact.phone.text': 'Lunes a Jueves: <br/> 09:30 a 14:00 y 16:30 a 20:00 <br/> Viernes: 09:00 a 14:00',
-        'contact.office.text': 'Rúa Barcelona, 9, bajo <br/> 36203 Vigo, Pontevedra',
+        'contact.office.text': 'Calle Barcelona, 9, bajo <br/> 36203 Vigo, Pontevedra',
         'contact.form.name': 'Nombre',
         'contact.form.email': 'Email',
         'contact.form.message': 'Escribe aquí tu mensaje...',
