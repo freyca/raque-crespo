@@ -76,7 +76,7 @@ export const ui = {
         'contact.form.email': 'Email',
         'contact.form.message': 'Escribe a túa mensaxe aquí...',
         'footer.text': 'Tódolos dereitos reservados',
-        'curriculum.title': 'Quen son',
+        'curriculum.title': 'Sobre min',
         'curriculum.paragraph1': 'Son graduada en Dereito pola Universidade de Granada e, tras un período de preparación para a carreira xudicial e fiscal, decidín orientar a miña traxectoria profesional cara á avogacía, adicándome ao asesoramento e á defensa xurídica das persoas e dos seus dereitos.',
         'curriculum.paragraph2': 'Exerzo a miña labor nun despacho independente en Vigo, en colaboración con outros profesionais, e presto servizos a clientes en toda Galicia.',
         'curriculum.paragraph3': 'Concibo o exercicio da avogacía como un servizo ás persoas, baseado na confianza mutua e na procura de solucións xustas e humanas. Por iso, cada caso é tratado con sensibilidade, análise minuciosa e un compromiso absoluto coa defensa dos dereitos fundamentais. A ética, o rigor e a transparencia, xunto coa defensa das garantías do proceso, marcan cada actuación, baixo un criterio xurídico sólido e respectuoso cara a quen represento.',
@@ -154,7 +154,7 @@ export const ui = {
         'contact.form.email': 'Email',
         'contact.form.message': 'Escribe aquí tu mensaje...',
         'footer.text': 'Todos los derechos reservados',
-        'curriculum.title': 'Quien soy',
+        'curriculum.title': 'Sobre mi',
         'curriculum.paragraph1': 'Soy graduada en Derecho por la Universidad de Granada y, tras un período de preparación para la carrera judicial y fiscal, decidí orientar mi trayectoria profesional hacia la abogacía, dedicándome al asesoramiento y a la defensa jurídica de las personas y de sus derechos.',
         'curriculum.paragraph2': 'Desempeño mi labor en un despacho independiente en Vigo, colaborando con otros profesionales, y presto servicios a clientes en toda Galicia.',
         'curriculum.paragraph3': 'Concibo el ejercicio de la abogacía como un servicio a las personas, basado en la confianza mutua y en la búsqueda de soluciones justas y humanas. Por ello, cada caso se trata con sensibilidad, análisis minucioso y un compromiso absoluto con la defensa de los derechos fundamentales. La ética, el rigor y la transparencia, junto con la defensa de las garantías del proceso, marcan cada actuación, bajo un criterio jurídico sólido y respetuoso hacia quienes represento.'

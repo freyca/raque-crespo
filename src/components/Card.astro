@@ -1,18 +1,18 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-const { title, body, image, crime_list } = Astro.props;
+const { title, body, image, image_alt, crime_list } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="card bg-base-100 max-w-96 shadow-sm">
+<div class="card bg-base-100 max-w-72 lg:max-w-96 shadow-sm">
     <figure>
-        <img src={image} alt="Shoes" />
+        <img src={image} alt={image_alt} />
     </figure>
 
     <div class="card-body">
-        <div class="collapse">
+        <div class="collapse collapse-arrow">
             <input type="checkbox" />
 
             <div class="collapse-title pl-0 font-bold">
