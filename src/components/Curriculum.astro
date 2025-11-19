@@ -1,5 +1,4 @@
 ---
-import CheckIcon from "../icons/CheckIcon.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
 const lang = getLangFromUrl(Astro.url);
@@ -8,65 +7,31 @@ const t = useTranslations(lang);
 
 <section
     id={t("nav.about")}
-    class="bg-gradient-to-b from-base-100 to-primary/50 min-h-screen flex place-items-center"
+    class="bg-gradient-to-b from-base-100 to-primary/50 min-h-screen hero flex place-items-center"
 >
-    <div class="max-w-3xl mx-auto px-16 md:px-4 p-4">
-        <h2
-            class="text-3xl font-semibold text-base-content md:text-4xl text-center my-6"
-        >
-            {t("about.title")}
-        </h2>
+    <div class="hero-content flex-col lg:flex-row-reverse mx-auto">
+        <img
+            src="/raquel_crespo_posando_sentada.jpeg"
+            class="my-4 max-w-xs max-h-64 md:max-h-110 rounded-lg shadow-2xl hidden md:block"
+        />
 
-        <ul
-            class="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical"
-        >
-            <li>
-                <div class="timeline-middle">
-                    <CheckIcon class="w-5 h-5 fill-secondary" />
-                </div>
-                <div class="timeline-start mb-10 md:text-end">
-                    <div>
-                        {t("about.paragraph1")}
-                    </div>
-                </div>
-                <hr class="bg-secondary/90" />
-            </li>
-            <li>
-                <hr class="bg-secondary/90" />
-                <div class="timeline-middle">
-                    <CheckIcon class="w-5 h-5 fill-secondary" />
-                </div>
-                <div class="timeline-end mb-10">
-                    <div>
-                        {t("about.paragraph2")}
-                    </div>
-                </div>
-                <hr class="bg-secondary/90" />
-            </li>
-            <li>
-                <hr class="bg-secondary/90" />
-                <div class="timeline-middle">
-                    <CheckIcon class="w-5 h-5 fill-secondary" />
-                </div>
-                <div class="timeline-start mb-10 md:text-end">
-                    <div>
-                        {t("about.paragraph3")}
-                    </div>
-                </div>
-                <hr class="bg-secondary/90" />
-            </li>
-
-            <li>
-                <hr class="bg-secondary/90" />
-                <div class="timeline-middle">
-                    <CheckIcon class="w-5 h-5 fill-secondary" />
-                </div>
-                <div class="timeline-end mb-10">
-                    <div>
-                        {t("about.paragraph4")}
-                    </div>
-                </div>
-            </li>
-        </ul>
+        <div class="mx-10">
+            <p
+                class="mt-4 mb-5 mx-auto text-4xl font-semibold text-secondary/95"
+            >
+                {t("curriculum.title")}
+            </p>
+            <p class="py-4">
+                <p class="text-base mb-4">
+                    {t("curriculum.paragraph1")}
+                </p>
+                <p class="text-base mb-4">
+                    {t("curriculum.paragraph2")}
+                </p>
+                <p class="text-base">
+                    {t("curriculum.paragraph3")}
+                </p>
+            </p>
+        </div>
     </div>
 </section>
