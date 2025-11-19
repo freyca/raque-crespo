@@ -82,7 +82,14 @@ export const ui = {
         'curriculum.paragraph3': 'Concibo o exercicio da avogacía como un servizo ás persoas, baseado na confianza mutua e na procura de solucións xustas e humanas. Por iso, cada caso é tratado con sensibilidade, análise minuciosa e un compromiso absoluto coa defensa dos dereitos fundamentais. A ética, o rigor e a transparencia, xunto coa defensa das garantías do proceso, marcan cada actuación, baixo un criterio xurídico sólido e respectuoso cara a quen represento.',
         'contact.phone': 'Teléfono',
         'contact.send': 'Enviar',
-        'contact.office': 'Despacho Profesional'
+        'contact.office': 'Despacho Profesional',
+        'alt.hero.image': 'Raquel Crespo avogada pousando de pe',
+        'alt.curriculum.image': 'Raquel Crespo avogada pousando sentada',
+        'alt.navbar.logo': 'Logotipo de Raquel Crespo',
+        'alt.strenghts.card1.image': 'Imaxe de dereito penal',
+        'alt.strenghts.card2.image': 'Imaxe de dereito penitenciario',
+        'alt.strenghts.card3.image': 'Imaxe de dereito de familia',
+        'alt.strenghts.card4.image': 'Imaxe de dereito administrativo'
     },
     es: {
         'card.see_more': 'Ver más',
@@ -157,7 +164,18 @@ export const ui = {
         'curriculum.title': 'Sobre mi',
         'curriculum.paragraph1': 'Soy graduada en Derecho por la Universidad de Granada y, tras un período de preparación para la carrera judicial y fiscal, decidí orientar mi trayectoria profesional hacia la abogacía, dedicándome al asesoramiento y a la defensa jurídica de las personas y de sus derechos.',
         'curriculum.paragraph2': 'Desempeño mi labor en un despacho independiente en Vigo, colaborando con otros profesionales, y presto servicios a clientes en toda Galicia.',
-        'curriculum.paragraph3': 'Concibo el ejercicio de la abogacía como un servicio a las personas, basado en la confianza mutua y en la búsqueda de soluciones justas y humanas. Por ello, cada caso se trata con sensibilidad, análisis minucioso y un compromiso absoluto con la defensa de los derechos fundamentales. La ética, el rigor y la transparencia, junto con la defensa de las garantías del proceso, marcan cada actuación, bajo un criterio jurídico sólido y respetuoso hacia quienes represento.'
+        'curriculum.paragraph3': 'Concibo el ejercicio de la abogacía como un servicio a las personas, basado en la confianza mutua y en la búsqueda de soluciones justas y humanas. Por ello, cada caso se trata con sensibilidad, análisis minucioso y un compromiso absoluto con la defensa de los derechos fundamentales. La ética, el rigor y la transparencia, junto con la defensa de las garantías del proceso, marcan cada actuación, bajo un criterio jurídico sólido y respetuoso hacia quienes represento.',
+        'contact.phone': 'Teléfono',
+        'contact.send': 'Enviar',
+        'contact.office': 'Despacho Profesional',
+        'alt.hero.image': 'Raquel Crespo abogada posando de pie',
+        'alt.curriculum.image': 'Raquel Crespo abogada posando sentada',
+        'alt.navbar.logo': 'Logotipo de Raquel Crespo',
+        'alt.strenghts.card1.image': 'Imagen de derecho penal',
+        'alt.strenghts.card2.image': 'Imagen de derecho penitenciario',
+        'alt.strenghts.card3.image': 'Imagen de derecho de familia',
+        'alt.strenghts.card4.image': 'Imagen de derecho administrativo'
+
     },
 } as const;
 
