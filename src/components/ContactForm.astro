@@ -93,7 +93,8 @@ const t = useTranslations(lang);
     </button>
 
     <span class="ml-3 w-full font-extrabold text-primary">
-        <span id="form-messages"></span>
+        <span class="rounded-lg px-5 py-2 text-center" id="form-messages"
+        ></span>
     </span>
 </form>
 
@@ -110,12 +111,21 @@ const t = useTranslations(lang);
         });
 
         const result = await response.json();
+        const sendResultUi = document.getElementById("form-messages");
+        sendResultUi.classList.remove = "bg-error";
+        sendResultUi.classList.remove = "bg-info";
+        sendResultUi.classList.remove = "text-secondary";
+        sendResultUi.classList.remove = "text-base-100";
 
         if (response.ok) {
-            document.getElementById("form-messages").innerHTML = result.success;
+            sendResultUi.innerHTML = result.success;
+            sendResultUi.classList.add("bg-info");
+            sendResultUi.classList.add("text-base-100");
             form.reset();
         } else {
-            document.getElementById("form-messages").innerHTML = result.error;
+            sendResultUi.innerHTML = result.error;
+            sendResultUi.classList.add("bg-error");
+            sendResultUi.classList.add("text-secondary");
         }
     });
 </script>
