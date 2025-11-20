@@ -28,6 +28,8 @@ class EmailSender
         $this->validateHoneyPotFields();
 
         $mail = new PHPMailer(true);
+        $mail->CharSet = $mail::CHARSET_UTF8;
+        $mail->Encoding = $mail::ENCODING_BASE64;
 
         try {
             //Recipients
