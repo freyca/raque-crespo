@@ -4,78 +4,88 @@ use PHPMailer\PHPMailer\PHPMailer;
 
 require 'PHPMailer.php';
 
-function sendEmail(
-    string $email_address,
-    string $name,
-    string $message
-): void {
-    $mail = new PHPMailer(true);
+class EmailSender
+{
+    private string $name;
+    private string $email;
+    private string $message;
+    private string $honey_phone;
+    private string $honey_name;
 
-    try {
-        //Recipients
-        $mail->setFrom('info@raquelcrespocastro.com', $name);
-        $mail->addAddress('raquel@guillermopresaabogados.com ', 'Raquel Crespo');
-        $mail->addReplyTo($email_address, $name);
+    function __construct(array $post_data)
+    {
+        $this->name = $post_data['input_name'] ?? '';
+        $this->email = $post_data['input_email'] ?? '';
+        $this->message = $post_data['input_text'] ?? '';
 
-        //Content
-        $mail->isHTML(false);
-        $mail->Subject = $name . ' contactou dende o formulario web';
-        $mail->Body    = $message;
+        $this->honey_phone = $post_data['phone-number'] ?? '';
+        $this->honey_name = $post_data['second-name	'] ?? '';
+    }
 
-        $mail->send();
+    public function sendEmail(): void
+    {
+        $this->validateInput();
+        $this->validateHoneyPotFields();
 
-        jsonResponse(['success' => 'Enviado correctamente.'], 200);
-    } catch (Exception $e) {
-        jsonResponse(['error' => 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo], 500);
+        $mail = new PHPMailer(true);
+
+        try {
+            //Recipients
+            $mail->setFrom('info@raquelcrespocastro.com', $this->name);
+            $mail->addAddress('raquel@guillermopresaabogados.com ', 'Raquel Crespo');
+            $mail->addReplyTo($this->email, $this->name);
+
+            //Content
+            $mail->isHTML(false);
+            $mail->Subject = $this->name . ' contactou dende o formulario web';
+            $mail->Body    = $this->message;
+
+            $mail->send();
+
+            Response::jsonResponse(['success' => 'Enviado correctamente.'], 200);
+        } catch (Exception $e) {
+            Response::jsonResponse(['error' => 'Message could not be sent. Mailer Error: ' . $mail->ErrorInfo], 500);
+        }
+    }
+
+    private function validateInput(): void
+    {
+        if (empty($this->name) || empty($this->email) || empty($this->message)) {
+            Response::jsonResponse(['error' => 'Campo inválido.'], 400);
+        }
+
+        if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            Response::jsonResponse(['error' => 'Introduce un email válido.'], 400);
+        }
+    }
+
+    private function validateHoneyPotFields(): void
+    {
+        if (!empty($this->honey_phone) || !empty($this->honey_name)) {
+            Response::jsonResponse(['error' => 'Spam detectado.'], 400);
+        }
     }
 }
 
-function validateInput(string $name, string $email, string $message): void
+class Response
 {
-    if (empty($name) || empty($email) || empty($message)) {
-        jsonResponse(['error' => 'Campo inválido.'], 400);
+    static public function jsonResponse($data, $status = 200): void
+    {
+        header('Content-Type: application/json');
+        http_response_code($status);
+        echo json_encode($data);
+        exit;
     }
-
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        jsonResponse(['error' => 'Introduce un email válido.'], 400);
-    }
-}
-
-function validateHoneyPotFields(string $honey_phone, string $honey_name): void
-{
-    if (!empty($honey_phone) || !empty($honey_name)) {
-        jsonResponse(['error' => 'Spam detectado.'], 400);
-    }
-}
-
-function jsonResponse($data, $status = 200): void
-{
-    header('Content-Type: application/json');
-    http_response_code($status);
-    echo json_encode($data);
-    exit;
 }
 
 function main(): void
 {
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-        jsonResponse(['error' => 'Method Not Allowed'], 405);
+        Response::jsonResponse(['error' => 'Method Not Allowed'], 405);
     }
 
-    $name = $_POST['input_name'] ?? '';
-    $email = $_POST['input_email'] ?? '';
-    $message = $_POST['input_text'] ?? '';
-
-    $honey_phone = $_POST['phone-number	'] ?? '';
-    $honey_name = $_POST['second-name	'] ?? '';
-
-    // Avoid form abusing
-    validateHoneyPotFields($honey_phone, $honey_name);
-
-    // Basic validation
-    validateInput($name, $email, $message);
-
-    sendEmail($email, $name, $message);
+    $emailSender = new EmailSender($_POST);
+    $emailSender->sendEmail();
 }
 
 main();
