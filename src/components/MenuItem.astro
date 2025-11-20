@@ -2,6 +2,8 @@
 const { href, text } = Astro.props;
 ---
 
-<a role="button" class="btn btn-soft btn-secondary" href={href}>
-    {text}
+<a role="button" class="btn" href={href}>
+    <span class="text-secondary">
+        {text}
+    </span>
 </a>
