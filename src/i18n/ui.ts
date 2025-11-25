@@ -7,6 +7,7 @@ export const defaultLang = 'gl';
 
 export const ui = {
     gl: {
+        'lawyers': 'avogados',
         'card.see_more': 'Ver máis',
         'card.see_less': 'Ver menos',
         'head.title': 'Raquel Crespo - Avogada en Vigo | Formación e especial interese en Dereito Penal e Penitenciario',
@@ -93,6 +94,7 @@ export const ui = {
         'alt.strenghts.card4.image': 'Imaxe de dereito administrativo'
     },
     es: {
+        'lawyers': 'abogados',
         'card.see_more': 'Ver más',
         'card.see_less': 'Ver menos',
         'head.title': 'Raquel Crespo - Abogada en Vigo | Formación y especial interés en Derecho Penal y Penitenciario',

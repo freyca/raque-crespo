@@ -25,7 +25,7 @@ const t = useTranslations(lang);
 
         <div class="divider"></div>
 
-        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-3">
             <div class="flex flex-col items-center justify-center text-center">
                 <a
                     href="tel:+34 986 223 129"
@@ -44,6 +44,22 @@ const t = useTranslations(lang);
                         {PhoneNumber}
                     </p>
                 </a>
+            </div>
+
+            <div class="divider md:hidden"></div>
+
+            <div class="flex flex-col items-center justify-center text-center">
+                <div
+                    class="font-ebgaramond bg-[url('/images/dark_wood.jpeg')] bg-cover bg-center bg-no-repeat bg-[#3a240f] brightness-150 px-6 lg:px-16 py-6 text-right rounded whitespace-nowrap break-keep"
+                >
+                    <p class="font-semibold text-xl text-gray-400">
+                        Guillermo Presa
+                    </p>
+                    <p class="pb-3 text-sm text-gray-400">{t("lawyers")}</p>
+                    <p class="text-gray-400">Guillermo Presa Suárez</p>
+                    <p class="text-gray-400">Lorena García Nantes</p>
+                    <p class="text-gray-400">Raquel Crespo Castro</p>
+                </div>
             </div>
 
             <div class="divider md:hidden"></div>
