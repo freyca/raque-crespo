@@ -65,24 +65,34 @@ const t = useTranslations(lang);
         </label>
     </div>
 
-    <label class="importantfield" for="second-name"></label>
-    <input
-        class="importantfield"
-        autocomplete="off"
-        type="text"
-        id="second-name"
-        name="second-name"
-        placeholder=""
-    />
-    <label class="importantfield" for="phone-number"></label>
-    <input
-        class="importantfield"
-        autocomplete="off"
-        type="text"
-        id="phone-number"
-        name="phone-number"
-        placeholder=""
-    />
+    <div
+        aria-hidden="true"
+        class="opacity-0 pointer-events-none h-0 overflow-hidden select-none"
+    >
+        <label for="input_phone" class="block text-sm mb-1">
+            Phone number
+        </label>
+        <input
+            type="text"
+            id="input_phone"
+            name="input_phone"
+            tabindex="-1"
+            autocomplete="off"
+            class="block w-full bg-transparent border border-transparent"
+        />
+
+        <label for="input_second_name" class="block text-sm mt-4 mb-1">
+            Second Name
+        </label>
+        <input
+            type="text"
+            id="input_second_name"
+            name="input_second_name"
+            tabindex="-1"
+            autocomplete="off"
+            class="block w-full bg-transparent border border-transparent"
+        />
+    </div>
     <button
         type="submit"
         class="text-secondary bg-gray-400

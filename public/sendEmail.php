@@ -18,12 +18,19 @@ class EmailSender
         $this->email = $post_data['input_email'] ?? '';
         $this->message = $post_data['input_text'] ?? '';
 
-        $this->honey_phone = $post_data['phone-number'] ?? '';
-        $this->honey_name = $post_data['second-name	'] ?? '';
+        $this->honey_phone = $post_data['input_phone'] ?? '';
+        $this->honey_name = $post_data['input_second_name	'] ?? '';
     }
 
     public function sendEmail(): void
     {
+        Log::logMessage([
+            'name' => $this->name,
+            'email' => $this->email,
+            'message' => $this->message,
+            'honey_phone' => $this->honey_phone,
+            'honey_name' => $this->honey_name,
+        ]);
         $this->validateInput();
         $this->validateHoneyPotFields();
 
@@ -77,6 +84,17 @@ class Response
         http_response_code($status);
         echo json_encode($data);
         exit;
+    }
+}
+
+class Log
+{
+    static public function logMessage(array $message_fields): void
+    {
+        $logFile = 'email_log.txt';
+        $timestamp = date('Y-m-d H:i:s');
+        $message = json_encode($message_fields);
+        file_put_contents($logFile, "[$timestamp] $message" . PHP_EOL, FILE_APPEND);
     }
 }
 
